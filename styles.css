@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.theme-button,
+.language-selector {
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    border: none;
+}
+
+.theme-button {
+    background-color: #4c8bf5;
+    color: white;
+    cursor: pointer;
+}
+
+.theme-button:hover {
+    background-color: #3a6fd8;
+}
+
+.language-selector {
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    background-color: #fff;
+}
+
+thead {
+    background-color: #e2e8f0;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Modo Claro */
+body.light-mode {
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+body.light-mode h1 {
+    color: red;
+}
+
+/* Modo Oscuro */
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+}
+
+body.dark-mode .container {
+    background-color: #2c2c2c;
+}
+
+body.dark-mode h1 {
+    color: green;
+}
+
+body.dark-mode select,
+body.dark-mode table,
+body.dark-mode th,
+body.dark-mode td {
+    background-color: #3a3a3a;
+    color: #f0f0f0;
+    border-color: #555;
+}
+.contacto {
+    margin-top: 30px;
+}
+
+.contacto label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+.contacto input,
+.contacto textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.contacto button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #4c8bf5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contacto button:hover {
+    background-color: #3a6fd8;
+}
+
+/* Adaptar estilos a modo oscuro */
+body.dark-mode .contacto input,
+body.dark-mode .contacto textarea {
+    background-color: #3a3a3a;
+    border-color: #555;
+    color: #f0f0f0;
+}

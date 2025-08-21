@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verbos en Inglés</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="light-mode">
+    <div class="container">
+      <div class="top-bar">
+        <button id="toggleTheme" class="theme-button">
+          Cambiar a Modo Oscuro
+        </button>
+        <select id="languageSelector" class="language-selector">
+          <option value="es">Español</option>
+          <option value="en">English</option>
+        </select>
+      </div>
+
+      <h1 id="title">Aprende los Verbos en Inglés</h1>
+
+      <section class="teoria">
+        <h2 id="section1-title">¿Qué es un verbo?</h2>
+        <p id="section1-text">
+          Un verbo es una palabra que describe una acción, un estado o un
+          proceso.
+        </p>
+
+        <h3 id="types-title">Tipos de verbos</h3>
+        <ul>
+          <li id="regular-desc">
+            <strong>Regulares:</strong> Forman el pasado simple con
+            <code>-ed</code>.
+          </li>
+          <li id="irregular-desc">
+            <strong>Irregulares:</strong> No siguen reglas fijas.
+          </li>
+        </ul>
+
+        <h3 id="examples-title">Ejemplos comunes</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Infinitivo</th>
+              <th>Pasado</th>
+              <th>Participio</th>
+              <th>Traducción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Go</td>
+              <td>Went</td>
+              <td>Gone</td>
+              <td>Ir</td>
+            </tr>
+            <tr>
+              <td>Work</td>
+              <td>Worked</td>
+              <td>Worked</td>
+              <td>Trabajar</td>
+            </tr>
+            <tr>
+              <td>Eat</td>
+              <td>Ate</td>
+              <td>Eaten</td>
+              <td>Comer</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <hr />
+
+      <section class="interactivo">
+        <h2 id="interactive-title">Consulta un verbo irregular</h2>
+        <label for="verbSelect" id="select-label">Selecciona un verbo:</label>
+        <select id="verbSelect">
+          <option value="">-- Elige uno --</option>
+          <option value="go">Go</option>
+          <option value="eat">Eat</option>
+          <option value="have">Have</option>
+          <option value="be">Be</option>
+          <option value="make">Make</option>
+        </select>
+
+        <div id="verbInfo" class="hidden">
+          <h2 id="verbTitle"></h2>
+          <p><strong>Infinitivo:</strong> <span id="infinitive"></span></p>
+          <p><strong>Pasado simple:</strong> <span id="past"></span></p>
+          <p>
+            <strong>Participio pasado:</strong> <span id="participle"></span>
+          </p>
+          <p><strong>Traducción:</strong> <span id="translation"></span></p>
+        </div>
+      </section>
+      <hr />
+
+      <section class="contacto">
+        <h2 id="contact-title">Contacto</h2>
+        <form id="contactForm">
+          <label for="nameInput" id="label-name">Nombre:</label><br />
+          <input type="text" id="nameInput" name="name" required /><br />
+
+          <label for="emailInput" id="label-email">Correo electrónico:</label
+          ><br />
+          <input type="email" id="emailInput" name="email" required /><br />
+
+          <label for="messageInput" id="label-message">Mensaje:</label><br />
+          <textarea
+            id="messageInput"
+            name="message"
+            rows="4"
+            required
+          ></textarea
+          ><br />
+
+          <button type="submit" id="sendButton">Enviar</button>
+        </form>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
