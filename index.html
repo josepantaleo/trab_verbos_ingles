@@ -1,129 +1,277 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Verbos en Inglés</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Sistemas Digitales - Resumen Clase 1</title>
+    <style>
+      a {
+        font-size: 25px;
+      }
+      /* Estilos optimizados para modernizar el diseño */
+      :root {
+        --primary: #3a2c50;
+        --secondary: #3498db;
+        --accent: #e67e22;
+        --bg: #f4f7f6;
+        --text: #333;
+        --white: #ffffff;
+        --shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+      }
+
+      body {
+        font-family:
+          "Segoe UI",
+          system-ui,
+          -apple-system,
+          sans-serif;
+        line-height: 1.6;
+        color: var(--text);
+        background-color: var(--bg);
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background: var(--primary);
+        color: var(--white);
+        padding: 3rem 1rem;
+        text-align: center;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 2.2rem;
+        letter-spacing: -1px;
+      }
+      header p {
+        margin: 8px 0 0;
+        opacity: 0.9;
+        font-size: 1.1rem;
+      }
+
+      .contenedor {
+        max-width: 900px;
+        margin: 30px auto;
+        padding: 0 20px;
+      }
+
+      section {
+        background: var(--white);
+        margin-bottom: 30px;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: var(--shadow);
+      }
+
+      h2 {
+        color: var(--primary);
+        border-left: 6px solid var(--secondary);
+        padding-left: 15px;
+        margin-top: 0;
+        font-size: 1.6rem;
+      }
+
+      h3 {
+        color: var(--secondary);
+        margin-top: 25px;
+      }
+
+      .resumen {
+        background: #e8f5e9;
+        color: #2e7d32;
+        padding: 18px;
+        border-radius: 10px;
+        border-left: 5px solid #4caf50;
+        font-weight: 600;
+        margin: 20px 0;
+      }
+
+      .ejemplo {
+        background: #fff9c4;
+        color: #5d4037;
+        padding: 18px;
+        border-radius: 10px;
+        border: 1px solid #ffe082;
+        font-family: "Consolas", "Monaco", monospace;
+        margin: 20px 0;
+      }
+
+      .tip {
+        background: #e3f2fd;
+        padding: 15px;
+        border-radius: 8px;
+        border-left: 4px solid var(--secondary);
+        margin: 15px 0;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 20px auto;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Visor de PDF embebido */
+      .pdf-viewer iframe {
+        width: 100%;
+        height: 600px;
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      }
+
+      .columnas {
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+
+      .columna {
+        flex: 1;
+        min-width: 280px;
+        background: #fcfcfc;
+        padding: 20px;
+        border-radius: 12px;
+        border: 1px solid #eee;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        background: white;
+      }
+
+      th,
+      td {
+        border: 1px solid #edf2f7;
+        padding: 14px;
+        text-align: left;
+      }
+
+      th {
+        background: var(--secondary);
+        color: white;
+      }
+      tr:nth-child(even) {
+        background-color: #f8fafc;
+      }
+
+      .container,
+      .box {
+        border: 1px solid #e2e8f0;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        background: #fdfdfd;
+      }
+
+      .key {
+        background: #e2e8f0;
+        padding: 3px 6px;
+        border-radius: 5px;
+        font-family: monospace;
+        font-weight: bold;
+        color: #4a5568;
+      }
+
+      code {
+        display: block;
+        background: #1e1e1e;
+        color: #dcdcdc;
+        padding: 20px;
+        border-radius: 10px;
+        overflow-x: auto;
+        font-family: "Consolas", monospace;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        word-spacing: 2px;
+        white-space: pre-wrap;
+      }
+
+      footer {
+        text-align: center;
+        padding: 3rem;
+        color: #94a3b8;
+        font-size: 0.95rem;
+      }
+
+      a {
+        color: var(--secondary);
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.2s;
+      }
+      a:hover {
+        color: var(--accent);
+        text-decoration: underline;
+      }
+
+      ul {
+        list-style-type: none;
+        padding-left: 10px;
+      }
+      ul li {
+        margin-bottom: 8px;
+      }
+
+      /* Estilos específicos para la nueva actividad de la tarjeta */
+      .opciones-container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 15px;
+      }
+      .opcion {
+        flex: 1;
+        min-width: 250px;
+        background: #f8fafc;
+        padding: 15px;
+        border-radius: 8px;
+        border: 1px solid #e2e8f0;
+      }
+
+      @media (max-width: 600px) {
+        header h1 {
+          font-size: 1.5rem;
+        }
+        section {
+          padding: 20px;
+        }
+        .pdf-viewer iframe {
+          height: 400px;
+        }
+      }
+    </style>
   </head>
-  <body class="light-mode">
-    <div class="container">
-      <div class="top-bar">
-        <button id="toggleTheme" class="theme-button">
-          Cambiar a Modo Oscuro
-        </button>
-        <select id="languageSelector" class="language-selector">
-          <option value="es">Español</option>
-          <option value="en">English</option>
-        </select>
-      </div>
 
-      <h1 id="title">Aprende los Verbos en Inglés</h1>
+  <body>
+    <header>
+      <h1>IPEM 146 - Curso IA</h1>
+      <p>5TO A Tarde - Informática</p>
+      <p>Actividades</p>
+      <p>Prof. J. Pantaleo</p>
+    </header>
 
-      <section class="teoria">
-        <h2 id="section1-title">¿Qué es un verbo?</h2>
-        <p id="section1-text">
-          Un verbo es una palabra que describe una acción, un estado o un
-          proceso.
-        </p>
-
-        <h3 id="types-title">Tipos de verbos</h3>
-        <ul>
-          <li id="regular-desc">
-            <strong>Regulares:</strong> Forman el pasado simple con
-            <code>-ed</code>.
-          </li>
-          <li id="irregular-desc">
-            <strong>Irregulares:</strong> No siguen reglas fijas.
-          </li>
-        </ul>
-
-        <h3 id="examples-title">Ejemplos comunes</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Infinitivo</th>
-              <th>Pasado</th>
-              <th>Participio</th>
-              <th>Traducción</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Go</td>
-              <td>Went</td>
-              <td>Gone</td>
-              <td>Ir</td>
-            </tr>
-            <tr>
-              <td>Work</td>
-              <td>Worked</td>
-              <td>Worked</td>
-              <td>Trabajar</td>
-            </tr>
-            <tr>
-              <td>Eat</td>
-              <td>Ate</td>
-              <td>Eaten</td>
-              <td>Comer</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-      <hr />
-
-      <section class="interactivo">
-        <h2 id="interactive-title">Consulta un verbo irregular</h2>
-        <label for="verbSelect" id="select-label">Selecciona un verbo:</label>
-        <select id="verbSelect">
-          <option value="">-- Elige uno --</option>
-          <option value="go">Go</option>
-          <option value="eat">Eat</option>
-          <option value="have">Have</option>
-          <option value="be">Be</option>
-          <option value="make">Make</option>
-        </select>
-
-        <div id="verbInfo" class="hidden">
-          <h2 id="verbTitle"></h2>
-          <p><strong>Infinitivo:</strong> <span id="infinitive"></span></p>
-          <p><strong>Pasado simple:</strong> <span id="past"></span></p>
-          <p>
-            <strong>Participio pasado:</strong> <span id="participle"></span>
-          </p>
-          <p><strong>Traducción:</strong> <span id="translation"></span></p>
+    <div class="contenedor">
+        <h2>Instructivo</h2>
+        <div class="pdf-viewer">
+          <iframe src="INICIO%20-%20Curso%20autoasistido%20de%20Introducci%C3%B3n%20a%20la%20IA.pdf" title="Instructivo: Curso de Introducción a la IA" loading="lazy"></iframe>
+          <p class="tip">Si no ves el PDF, <a href="INICIO - Curso autoasistido de Introducción a la IA.pdf" target="_blank" rel="noopener">ábrelo en otra pestaña</a>.</p>
         </div>
-      </section>
-      <hr />
-
-      <section class="contacto">
-        <h2 id="contact-title">Contacto</h2>
-        <form id="contactForm">
-          <label for="nameInput" id="label-name">Nombre:</label><br />
-          <input type="text" id="nameInput" name="name" required /><br />
-
-          <label for="emailInput" id="label-email">Correo electrónico:</label
-          ><br />
-          <input type="email" id="emailInput" name="email" required /><br />
-
-          <label for="messageInput" id="label-message">Mensaje:</label><br />
-          <textarea
-            id="messageInput"
-            name="message"
-            rows="4"
-            required
-          ></textarea
-          ><br />
-
-          <button type="submit" id="sendButton">Enviar</button>
-        </form>
-      </section>
+      <h2>Respuesta Actividad 1</h2>
+      <img src="ACT1.jpg" alt="" />
+      <h2>Respuesta Actividad 2</h2>
+      <img src="ACT2.bmp" alt="" />
     </div>
+
     <footer>
-      <p>MArio Lopez - Carolina Perez - Chico Febrero2031</p>
+      <p>IPEM 146 - Sistemas Digitales 2026</p>
     </footer>
-    <script src="script.js"></script>
   </body>
 </html>
-
